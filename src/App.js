@@ -1,19 +1,25 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-// import { Router } from 'workbox-routing';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Starred from './pages/Starred';
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/">
-        Welcome to My World
-      </Route>
-      <Route path="/second">
-        I failed lots of time but I will not loose hope, Before 2023 I will be
-        software developer
-      </Route>
-      <Route>this is 404 page</Route>
-    </Switch>
+    <div>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/starred">
+          <Starred />
+        </Route>
+        <Route>
+          <div>404 Not found</div>
+        </Route>
+      </Switch>
+    </div>
   );
 }
 
