@@ -5,7 +5,7 @@ import { CastList } from './Cast.styled';
 const Cast = ({ cast }) => {
   return (
     <CastList>
-      {cast.map(({ person, character, voice }, key) => (
+      {cast.map(({ person, character }, key) => (
         <div key={key} className="cast-item">
           <div className="pic-wrapper">
             <img
@@ -15,8 +15,8 @@ const Cast = ({ cast }) => {
           </div>
           <div className="actor">
             <span>
-              <span className="bold">{person.name}</span>| {character.name}{' '}
-              {voice ? '| Voice' : ''}
+              <span className="bold">{person.name}</span> as{' '}
+              <i>{character.name}</i>
             </span>
           </div>
         </div>

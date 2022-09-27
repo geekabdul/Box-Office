@@ -58,7 +58,7 @@ const Show = () => {
       isMounted = false;
     };
   }, [id]);
-  //   console.log('show', show);
+  console.log('show', show);
 
   if (isLoading) {
     return <div>Data is being Loaded</div>;
